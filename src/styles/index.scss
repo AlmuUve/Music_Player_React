@@ -1,13 +1,17 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(138, 132, 132);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+.container{
+    margin: 0;
+    padding: 0;
+}
+.allSongsList{
+    list-style-type: none;
+}
