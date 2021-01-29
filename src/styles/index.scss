@@ -1,17 +1,67 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
 
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 3rem;
-    background-color: rgb(138, 132, 132);
+
+body{
+    background-color: #162227;
+    font-family: 'Bitter', serif;
+    text-transform: capitalize;
 }
-
+#app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 .allSongsList{
-    list-style-type: none;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // list-style-type: none;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+ol{
+    color: aliceblue;
+    border-collapse: collapse; 
+    
+}
+li{
+    margin-top: 0.4rem;
+    border-bottom:1px solid #2C444E;
+    padding: 0 50px; 
+}
+li:active {
+    background-color: #2C444E;
+}
+li:hover {
+    color: #D17A22;
+}
+li::marker {
+    border-bottom:1px solid #2C444E;
+    padding: 0 50px; 
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: #2C444E;
+}
+button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden;
+    outline:none;
 }

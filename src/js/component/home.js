@@ -64,7 +64,7 @@ export function Home() {
 	}
 	return (
 		<div className="container">
-			<ul className="allSongsList">{songMap}</ul>
+			<ol className="allSongsList">{songMap}</ol>
 			<audio src={nowPlay} autoPlay />
 			<footer>
 				<button onClick={() => previousSong(temporalIndex)}>
