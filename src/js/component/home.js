@@ -23,7 +23,7 @@ export function Home() {
 				setSongList(dataAsJson);
 			})
 			.catch(error => {
-				console.log("Looks like there was a problem!", error);
+				"Looks like there was a problem!", error;
 			});
 	}, []);
 
@@ -51,13 +51,11 @@ export function Home() {
 	}
 
 	function previousSong(songIndex) {
-		// let newSong= songList[songIndex - 1];
 		let newurl = THEurl.concat(songList[songIndex - 1].url);
 		setNowPlay(newurl);
 		setTemporalIndex(songIndex - 1);
 	}
 	function nextSong(songIndex) {
-		// let newSong= songList[songIndex - 1];
 		let newurl = THEurl.concat(songList[songIndex + 1].url);
 		setNowPlay(newurl);
 		setTemporalIndex(songIndex + 1);
