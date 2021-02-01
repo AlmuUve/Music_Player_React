@@ -8,7 +8,7 @@ export function Home() {
 	const [songList, setSongList] = useState([]);
 	const [nowPlay, setNowPlay] = useState("");
 	const AUDIO_TAG = document.querySelector("audio");
-	let THEurl = "https://assets.breatheco.de/apis/sound/";
+	const THEurl = "https://assets.breatheco.de/apis/sound/";
 	const [temporalIndex, setTemporalIndex] = useState(-1);
 
 	useEffect(() => {
@@ -31,10 +31,9 @@ export function Home() {
 		return (
 			<li
 				key={song.url}
-				className={song.url}
 				onClick={() => {
-					THEurl = THEurl.concat(song.url);
-					setNowPlay(THEurl);
+					let newurl = THEurl.concat(song.url);
+					setNowPlay(newurl);
 					setTemporalIndex(index);
 				}}>
 				{song.name}
