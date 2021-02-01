@@ -50,14 +50,38 @@ export function Home() {
 	}
 
 	function previousSong(songIndex) {
-		let newurl = THEurl.concat(songList[songIndex - 1].url);
-		setNowPlay(newurl);
-		setTemporalIndex(songIndex - 1);
+		// let newurl = THEurl.concat(songList[songIndex - 1].url);
+		// setNowPlay(newurl);
+		// setTemporalIndex(songIndex - 1);
+		let newurl = "";
+		if (songList[songIndex - 1]) {
+			//if this exists
+			newurl = THEurl.concat(songList[songIndex - 1].url);
+			setNowPlay(newurl);
+			setTemporalIndex(songIndex - 1);
+		} else {
+			//no exists (songList[-1])
+			newurl = THEurl.concat(songList[songList.length - 1].url);
+			setNowPlay(newurl);
+			setTemporalIndex(songList.length - 1);
+		}
 	}
 	function nextSong(songIndex) {
-		let newurl = THEurl.concat(songList[songIndex + 1].url);
-		setNowPlay(newurl);
-		setTemporalIndex(songIndex + 1);
+		// let newurl = THEurl.concat(songList[songIndex + 1].url);
+		// setNowPlay(newurl);
+		// setTemporalIndex(songIndex + 1);
+		let newurl = "";
+		if (songList[songIndex + 1]) {
+			//if this exists
+			newurl = THEurl.concat(songList[songIndex + 1].url);
+			setNowPlay(newurl);
+			setTemporalIndex(songIndex + 1);
+		} else {
+			//no exists (songList[+1 de lenght])
+			newurl = THEurl.concat(songList[0].url);
+			setNowPlay(newurl);
+			setTemporalIndex(0);
+		}
 	}
 	return (
 		<div className="container">
